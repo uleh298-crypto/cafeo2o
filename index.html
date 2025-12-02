@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe O2O Smart Store Portfolio</title>
+    <title>김준규 | Cafe O2O Smart Store Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+
     <style>
         /* ===== Global ===== */
         body {
@@ -13,42 +14,45 @@
             background: #0d0d0d;
             color: #e1e1e1;
         }
-
         section {
             padding: 100px 12%;
         }
-
         h1, h2, h3 {
             font-weight: 600;
             color: #fff;
         }
-
         p {
             color: #cfcfcf;
             line-height: 1.7;
         }
 
-        /* ===== Hero Section ===== */
+        /* ===== Hero ===== */
         .hero {
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-align: center;
             position: relative;
         }
-
         .hero h1 {
-            font-size: 64px;
+            font-size: 58px;
             margin-bottom: 10px;
             text-shadow: 0 0 20px #00eaff;
         }
-
+        .hero h3 {
+            font-size: 24px;
+            font-weight: 300;
+            margin-top: 15px;
+            color: #8defff;
+            text-shadow: 0 0 10px #00eaff99;
+        }
         .hero p {
-            font-size: 20px;
+            margin-top: 20px;
+            font-size: 18px;
             opacity: 0.9;
         }
 
-        /* Background glow */
         .hero::before {
             content: "";
             position: absolute;
@@ -61,13 +65,12 @@
             z-index: -1;
         }
 
-        /* ===== Card Grid ===== */
+        /* ===== Grid ===== */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
-
         .card {
             background: rgba(20,20,20,0.9);
             border: 1px solid #222;
@@ -76,7 +79,6 @@
             backdrop-filter: blur(5px);
             transition: 0.3s ease;
         }
-
         .card:hover {
             border-color: #00eaff;
             box-shadow: 0 0 15px #00eaff80;
@@ -106,18 +108,25 @@
 
     <!-- Hero -->
     <section class="hero">
-        <h1>Cafe O2O Smart Store</h1>
-        <p>온라인 & 오프라인을 연결한 스마트 주문·스탬프·관리 서비스</p>
+        <h1>김준규</h1>
+        <h3>유저 친화적인 개발자</h3>
+        <p>온라인과 오프라인을 연결하는 O2O 서비스 개발에 관심이 있으며,<br>
+        주로 모바일 앱 개발을 선호하고 웹 프론트 및 백엔드 경험도 있습니다.</p>
     </section>
 
     <!-- About -->
     <section id="about">
         <h2>About Me</h2>
         <p>
-            안드로이드·웹·서버를 모두 다룰 수 있는 풀스택 역량을 기반으로  
-            편리한 사용자 경험을 제공하는 O2O 서비스를 만드는 데 관심이 있습니다.  
-            SSAFY 과정에서 Cafe O2O Smart Store 프로젝트를 진행하며  
-            요구 분석부터 DB 설계·API 개발·모바일 UI 개발까지 전체 과정을 경험했습니다.
+            안녕하세요. 개발자 <b>김준규</b>입니다.<br><br>
+
+            1999년 10월 11일 출생이며,  
+            <b>연세대학교 미래캠퍼스 소프트웨어공학과(2023.03 ~ 2025.02)</b>에서  
+            소프트웨어 공학 이론과 실습을 기반으로 모바일·웹·백엔드 전반을 학습했습니다.<br><br>
+
+            SSAFY 과정에서는 Cafe O2O Smart Store 프로젝트를 진행하며  
+            요구분석 → DB 설계 → API 개발 → Android 앱 개발까지  
+            서비스 개발의 전 과정을 경험했습니다.
         </p>
     </section>
 
@@ -125,10 +134,10 @@
     <section id="skills">
         <h2>Skills</h2>
         <div class="grid">
-            <div class="card"><h3>Android(Kotlin)</h3>Activity/Fragment, Retrofit, Coroutine, Room, Firebase</div>
-            <div class="card"><h3>Vue.js</h3>SPA 구조, Router, Axios, EventBus 기반 컴포넌트 설계</div>
-            <div class="card"><h3>Spring Boot</h3>REST API, MyBatis, JWT 인증/인가, ERD 설계</div>
-            <div class="card"><h3>MySQL</h3>ORM 구조, 트랜잭션 처리, 스키마 설계 경험</div>
+            <div class="card"><h3>Android (Kotlin)</h3>Activity/Fragment, Retrofit, Coroutine, Room, Firebase</div>
+            <div class="card"><h3>Vue.js</h3>SPA 구조, Router, Axios, Pinia, 컴포넌트 설계</div>
+            <div class="card"><h3>Spring Boot</h3>REST API, MyBatis, JWT, ERD 설계</div>
+            <div class="card"><h3>MySQL</h3>JOIN, Index, 트랜잭션, 스키마 설계</div>
         </div>
     </section>
 
@@ -140,34 +149,28 @@
 
             <div class="card">
                 <h3>Cafe O2O Smart Store</h3>
-                <p><b>역할:</b> Android + API Server 개발</p>
+                <p><b>역할:</b> Android + 백엔드 개발</p>
                 <p>
-                    사용자 주문 → 장바구니 → 결제 → 스탬프 적립까지  
-                    하나의 흐름으로 완성한 O2O 기반 카페 어플리케이션입니다.
+                    주문 → 장바구니 → 결제 → 스탬프 적립까지  
+                    하나의 흐름으로 완성한 O2O 기반 카페 앱 프로젝트입니다.
                 </p>
             </div>
 
             <div class="card">
                 <h3>Admin Web (Vue.js)</h3>
-                <p>SPA 구조로 관리자용 주문·상품·리뷰 관리를 구현했습니다.</p>
+                <p>Vue3로 관리자용 주문·상품·리뷰 관리 페이지를 SPA로 구현했습니다.</p>
             </div>
 
             <div class="card">
                 <h3>Spring API Server</h3>
-                <p>회원·주문·스탬프·리뷰 전 기능을 API로 구현한 백엔드 서버입니다.</p>
+                <p>회원/주문/스탬프/리뷰 전체 기능을 API로 구현한 서버입니다.</p>
             </div>
-
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:your-email@gmail.com">your-email@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/your-github" target="_blank">github.com/your-github</a></p>
-    </section>
 
-    <footer>© 2025 Cafe O2O Smart Store Portfolio — Dark Edition</footer>
+    <footer>© 2025 Kim Junkyu Portfolio — Dark Edition</footer>
 
 </body>
 </html>
